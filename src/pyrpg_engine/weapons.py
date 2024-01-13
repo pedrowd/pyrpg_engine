@@ -31,6 +31,7 @@ class SmallSword(Sword):
     level = 1
     size = 1
 
+
 @dataclass
 class SmallSharpSword(Sword):
     damage: int = 1
