@@ -4,7 +4,7 @@ from typing import TYPE_CHECKING
 
 from armor import LeatherCap
 from characters import PC, Character, Enemy
-from journeys.status import Bleeding
+from status import Bleeding
 from slots import Slots
 from weapons import SmallSword
 

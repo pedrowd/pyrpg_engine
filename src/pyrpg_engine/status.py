@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from journeys.characters import Character
+    from characters import Character
 
 
 @dataclass

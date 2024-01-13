@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, cast
 
 from armor import Armor, BodyArmor, Helmet, Shield
-from journeys.status import Status
+from status import Status
 from slots import Slots
 from weapons import Weapon
 
