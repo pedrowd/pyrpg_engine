@@ -25,6 +25,7 @@ class Status:
     def apply_effect(self, character: Character):
         pass
 
+
 @dataclass
 class Bleeding(Status):
     name: str = "Bleeding"
@@ -46,7 +47,9 @@ class Bleeding(Status):
     def apply_effect(self, character: Character):
         character.hp -= self.damage
         print(f"{self.name} {self.level} has duration: {self.duration}.")
-        print(f"{character.name} received {self.damage} damage from {self.name} {self.level}. Remaining HP: {character.hp}.")
+        print(
+            f"{character.name} received {self.damage} damage from {self.name} {self.level}. Remaining HP: {character.hp}."
+        )
         self.duration -= 1
         if self.duration < 1:
             character.status_list.remove(self)
