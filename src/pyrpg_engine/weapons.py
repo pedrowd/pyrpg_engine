@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from items import Item
+from status import Status, Bleeding
 
 
 @dataclass
@@ -12,7 +13,7 @@ class Weapon(Item):
     damage: int = 0
     range: int = 0
     name: str = "Weapon"
-    status: None = None
+    status: type[Status] | None = None
     status_chance: float = 0.0
     status_level: int = 0
 
@@ -39,3 +40,6 @@ class SmallSharpSword(Sword):
     value: int = 2
     level: int = 2
     size: int = 1
+    status: type[Status] | None = Bleeding
+    status_chance: float = 0.2
+    status_level: int = 1
